@@ -74,13 +74,14 @@ function Advice() {
                 <div className={`
                     absolute bottom-[-28px]
                     flex justify-center
-                    rounded-full bg-neon-green
+                    rounded-full
                     w-[56px] h-[56px]
                     transition-shadow hover:shadow-neon-green hover:shadow-[0_0_32px_0]
                     cursor-pointer
                     ${
                         result.isFetching 
-                        && 'pointer-events-none bg-grayish-blue hover:shadow-none'
+                        ? 'pointer-events-none bg-grayish-blue hover:shadow-none'
+                        : 'bg-neon-green'
                     }
                 `}
                 onClick={() => result.refetch()}
